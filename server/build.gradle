@@ -1,0 +1,29 @@
+
+description = """scala-karyon-example-server"""
+
+mainClassName = "com.syamantak.scala.karyon.server.Main"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.netflix.karyon:karyon2-admin-web:2.7.1'
+    compile 'com.netflix.karyon:karyon2-eureka:2.7.1'
+    compile 'com.netflix.karyon:karyon2-archaius:2.7.1'
+    compile 'com.netflix.karyon:karyon2-servo:2.7.1'
+
+    testCompile "org.testng:testng:6.8"
+    testCompile group: 'org.mockito', name: 'mockito-core', version:'1.10.19'
+    testCompile "org.scalatest:scalatest_2.11:2.2.4"
+}
+
+test {
+    // enable TestNG support (default is JUnit)
+    useTestNG()
+
+    // listen to events in the test execution lifecycle
+    beforeTest { descriptor ->
+       logger.lifecycle("Running test: " + descriptor)
+    }
+}
