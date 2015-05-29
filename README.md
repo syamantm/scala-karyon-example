@@ -1,6 +1,6 @@
-## Scala + Karyon
+## Scala Micro Service with Netflix OSS
 
-An example scala micro-service using [Karyon](https://github.com/Netflix/karyon) for server and [feign](https://github.com/Netflix/feign) for client
+An example scala micro-service using [Netflix Karyon](https://github.com/Netflix/karyon) for server and [Netflix feign](https://github.com/Netflix/feign) for client
 
 
 ### Run Server
@@ -17,7 +17,7 @@ In a different terminal,
 
 ```
 $ cd client
-$ gradle test
+$ gradle run
 ```
 
 you should see messages from server
