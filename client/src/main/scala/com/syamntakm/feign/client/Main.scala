@@ -38,7 +38,7 @@ case class Die(val msg: String) extends ActorMessage
 
 object Main extends App {
 
-  val helloService: HelloService = Feign.builder().target(classOf[HelloService], "http://localhost:8080");
+  val helloService: HelloService = Feign.builder().target(classOf[HelloService], "http://localhost:8080")
 
   val system = ActorSystem("HelloSystem")
 

@@ -43,4 +43,7 @@ Stopping server
 BUILD SUCCESSFUL
 ```
 
+## Karyon Admin interface
+Once the server is started, the admin interface is available at : `http://localhost:8077/admin/`.
+
 
